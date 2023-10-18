@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC    
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"    
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="hibernate.connection.driver.class">oracle.jdbc.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="hibernate.connection.username">c##Hibernate</property>
+		<property name="hibernate.connection.password">Reyansh11</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+
+
+
+		<!-- <property name="hibernate.connection.url">jdbc:mysql:///hibernate</property> 
+			<property name="hibernate.connection.url">jdbc:mysql://@localhost:3306/hibernate</property> 
+			<property name="hibernate.connection.username">root</property> <property 
+			name="hibernate.connection.password">root</property> -->
+
+
+		<!-- HiberanteProperties -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<mapping resource="com/org/entity/product.hbml.xml" />
+
+	</session-factory>
+
+</hibernate-configuration>	
