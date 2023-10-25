@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC    
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"    
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+        
+<hibernate-configuration>
+
+   <session-factory>
+      <!-- Connection properties -->
+      <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+      <property name="connection.username">c##hibernate</property>
+      <property name="connection.password">Hemanth11</property>
+      
+      <!-- hibernate properties -->
+      <property name="show_sql">true</property>
+      <property name="format_sql">true</property>
+      <property name="hbm2ddl.auto">create-drop</property>
+      <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+      
+      <!-- mapping file name -->
+      <mapping class="com.org.entity.Product" />
+      
+   </session-factory>
+
+</hibernate-configuration>
