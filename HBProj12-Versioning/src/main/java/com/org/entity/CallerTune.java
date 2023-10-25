@@ -10,7 +10,7 @@ import jakarta.persistence.Version;
 import lombok.Data;
 
 @Entity
-@Table(name = "CTUNE_INFO")
+@Table(name = "CALLERTUNE_INFO")
 @Data
 public class CallerTune {
 	

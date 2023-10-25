@@ -32,7 +32,7 @@ public class SaveCallerTuneObjectTest {
 		}
 		catch(Exception e) {
 			
-			if(tx != null || tx.getStatus()!= null || tx.getRollbackOnly()) {
+			if(tx != null && tx.getStatus()!= null && tx.getRollbackOnly()) {
 				System.out.println("Object Failed to save");
 				tx.rollback();
 			}
