@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	 <class name="com.org.entity.Product"  table="PRODUCT_GEN" dynamic-insert="true">
+	     
+	    <!--  <id name="pid" column="PID" >
+	         <generator class="assigned" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="increment" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="identity" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="sequence" >
+	              <param name="sequence_name">PID_SEQ</param>
+	              <param name="initial_value">1000</param>
+	              <param name="increment_size">5</param>
+	         </generator>
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="sequence" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="native" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="uuid" />
+	     </id> -->
+	     
+	     <!-- <id name="pid" column="PID" >
+	         <generator class="guid" />
+	     </id> -->
+	     
+	     <id name="pid" column="PID" >
+	         <generator class="com.org.customgenerator.CustomGenerator" />
+	     </id>
+	     
+	     <property name="pname" column="PNAME"/>
+	     <property name="price" column="PRICE"/>
+	     <property name="qty"  column="QTY"/>
+	  </class>
+	
+	</hibernate-mapping>
