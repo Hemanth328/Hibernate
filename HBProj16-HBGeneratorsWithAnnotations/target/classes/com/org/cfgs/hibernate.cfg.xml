@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC    
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"    
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Connection properties -->
+		<!-- <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="connection.username">c##hibernate</property>
+		<property name="connection.password">Hemanth11</property> -->
+
+		<property name="hibernate.connection.url">jdbc:mysql:///hibernate</property>
+		<property name="hibernate.connection.url">jdbc:mysql://@localhost:3306/hibernate</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- hibernate properties -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- <property name="dialect">org.hibernate.dialect.OracleDialect</property> -->
+
+		<!-- mapping file name -->
+		<mapping class="com.org.entity.Movie" />
+
+	</session-factory>
+
+</hibernate-configuration>
